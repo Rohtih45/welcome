@@ -1,0 +1,9 @@
+FROM openjdk:17
+
+COPY target/Welcome-API-0.0.1-SNAPSHOT.jar /user/app/
+
+WORKDIR /user/app
+
+EXPOSE 8080
+
+ENTRYPOINT [ "java","-jar", "Welcome-API-0.0.1-SNAPSHOT.jar"]
